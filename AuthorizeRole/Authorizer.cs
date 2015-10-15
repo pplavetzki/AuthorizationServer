@@ -46,7 +46,7 @@ namespace AuthorizeRole
             var inMemKey = new InMemorySymmetricSecurityKey(securityKey);
 
             ClaimsIdentity identity = new ClaimsIdentity();
-            identity.AddClaim(new Claim("scope", "full"));
+            identity.AddClaim(new Claim("access", client.Access));
 
             JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
             SecurityToken securityToken = handler.CreateToken(new SecurityTokenDescriptor()

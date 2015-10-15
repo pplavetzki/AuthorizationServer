@@ -1,5 +1,6 @@
 ﻿using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
+using Microsoft.WindowsAzure.ServiceRuntime;
 using System;
 using System.Configuration;
 using System.IdentityModel.Tokens;
@@ -46,7 +47,7 @@ namespace AuthorizeRole
             var scope = jwt.Claims.FirstOrDefault(c => c.Type == "scope");
             var iss = jwt.Claims.FirstOrDefault(c => c.Type == "iss");
 
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["StorageConnectionString"].ToString());
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("StorageConnectionString"));
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
             // Create the table if it doesn't exist.
             CloudTable table = tableClient.GetTableReference("Clients");
