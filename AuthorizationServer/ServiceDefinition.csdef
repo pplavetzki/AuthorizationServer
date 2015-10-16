@@ -3,6 +3,7 @@
   <WorkerRole name="AuthorizeRole" vmsize="Small">
     <ConfigurationSettings>
       <Setting name="StorageConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
     <Endpoints>
       <InputEndpoint name="AuthorizeEndPoint" protocol="http" port="10100" localPort="10100" />

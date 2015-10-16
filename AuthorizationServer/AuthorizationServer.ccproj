@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <PublishProfile Include="Profiles\authorization-pareidoliaswStaging.azurePubxml" />
+    <PublishProfile Include="Profiles\authorization-production.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>

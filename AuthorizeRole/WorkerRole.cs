@@ -47,7 +47,7 @@ namespace AuthorizeRole
             // New code:
             var endpoint = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints["AuthorizeEndPoint"];
             string baseUri = String.Format("{0}://{1}",
-                endpoint.Protocol, "localhost:10100");
+                endpoint.Protocol, endpoint.IPEndpoint);
 
             Trace.TraceInformation(String.Format("Starting AuthorizeRole OWIN at {0}", baseUri),
                 "Information");

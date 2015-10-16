@@ -4,6 +4,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=authorization;AccountKey=uQcQj1G8AJYAIvnAsvtCb9boGANbR9eEHbc/iesAnRx+aWlDxP2z31fsh5+lb1Vb6Jjp3X3nP1omicy78eyaJQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=authorization;AccountKey=uQcQj1G8AJYAIvnAsvtCb9boGANbR9eEHbc/iesAnRx+aWlDxP2z31fsh5+lb1Vb6Jjp3X3nP1omicy78eyaJQ==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
